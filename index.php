@@ -26,6 +26,8 @@ $giorgio->setCarta($c);
 
 var_dump($giorgio);
 
+
+
 $stefano = new User_premium("Stefano", "Bianchi", "07-08-88", "Via tionfale 11400");
 
 if($stefano->getPremium()){
@@ -38,4 +40,10 @@ $d = new Card(533314104447896, 10, 18, 898);
 $stefano->setCarta($d);
 
 var_dump($stefano);
+
+try {
+    $stefano->ceckCarta();
+} catch(Exception $e){
+    echo "Allert: " . $e->getMessage();
+}
 

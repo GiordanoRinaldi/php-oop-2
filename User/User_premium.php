@@ -14,4 +14,11 @@ class User_premium extends User{
     {
         return $this->premium;
     }
+
+    public function ceckCarta()
+    {
+        if($this->dati_carta[0]->anno_scad < 21){
+            throw new Exception("carta scaduta");
+        }
+    }
 }
