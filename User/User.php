@@ -35,5 +35,10 @@ class User {
         return $this->via;
     }
 
-    
+    public function getPremium()
+    {
+        return $this->premium;
+    }
+
+
 }
